@@ -25,11 +25,9 @@ cursor.execute('''SELECT studentID, courseID, MAX(grade)
                   FROM grades 
                   GROUP BY studentID''')
 max_grades = cursor.fetchall() 
-print("Max Grades:", max_grades)
 cursor.execute('''SELECT studentID, AVG(grade) 
                   FROM grades 
                   GROUP BY studentID''')
 avg_grades = cursor.fetchall()
-print("Average Grades:", avg_grades)
 
 db.close()
